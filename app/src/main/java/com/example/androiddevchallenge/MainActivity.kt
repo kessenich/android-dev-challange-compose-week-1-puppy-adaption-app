@@ -49,7 +49,8 @@ class MainActivity : AppCompatActivity() {
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
         Column {
-            Text("Puppy adoption",
+            Text(
+                "Puppy adoption",
                 style = MaterialTheme.typography.h4,
                 color = MaterialTheme.colors.primaryVariant,
                 textAlign = TextAlign.Center,
@@ -59,8 +60,6 @@ fun MyApp() {
         }
     }
 }
-
-
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
@@ -77,5 +76,3 @@ fun DarkPreview() {
         MyApp()
     }
 }
-
-

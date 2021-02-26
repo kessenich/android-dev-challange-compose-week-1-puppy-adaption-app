@@ -24,4 +24,3 @@ val purple900 = Color(0xff422e49)
 val teal500 = Color(0xff49cdd1)
 val black200 = Color(0xff3b4151)
 val black500 = Color(0xff2e394b)
-
