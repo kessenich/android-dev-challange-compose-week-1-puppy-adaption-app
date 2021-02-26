@@ -29,14 +29,15 @@ import com.example.androiddevchallenge.ui.theme.MyTheme
 @Composable
 fun PuppyList(
     modifier: Modifier = Modifier,
-    puppies: List<Puppy>
+    puppies: List<Puppy>,
+    puppySelected: (Long) -> Unit,
 ) {
     LazyColumn(
         modifier = modifier,
         contentPadding = PaddingValues(top = 8.dp)
     ) {
         items(items = puppies) { puppy ->
-            PuppyCard(puppy = puppy)
+            PuppyCard(puppy = puppy, onClick = puppySelected)
         }
     }
 }
@@ -47,7 +48,7 @@ fun PuppyListPreviewLight() {
     val puppyList = PuppyListViewModel().puppies
 
     MyTheme {
-        PuppyList(puppies = puppyList)
+        PuppyList(puppies = puppyList, puppySelected = {})
     }
 }
 
@@ -57,6 +58,6 @@ fun PuppyListPreviewDark() {
     val puppyList = PuppyListViewModel().puppies
 
     MyTheme(darkTheme = true) {
-        PuppyList(puppies = puppyList)
+        PuppyList(puppies = puppyList, puppySelected = {})
     }
 }

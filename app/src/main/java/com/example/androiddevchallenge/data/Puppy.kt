@@ -16,6 +16,7 @@
 package com.example.androiddevchallenge.data
 
 data class Puppy(
+    val id: Long,
     val name: String,
     val breed: String,
     val image: Int,

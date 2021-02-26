@@ -20,22 +20,26 @@ import com.example.androiddevchallenge.R
 
 class PuppyListViewModel : ViewModel() {
 
-    var puppies = listOf<Puppy>(
-        Puppy(name = "Annabelle", breed = "Akita Inu", image = R.drawable.akita_inu),
-        Puppy(name = "Britta", breed = "Beagle", image = R.drawable.beagle),
-        Puppy(name = "Charles", breed = "Chihuahua", image = R.drawable.chihuahua),
-        Puppy(name = "Davis", breed = "Dachshund", image = R.drawable.dachshund),
-        Puppy(name = "Dex", breed = "Dalmatian", image = R.drawable.dalmatian),
-        Puppy(name = "Dalton", breed = "Doberman Pinscher", image = R.drawable.doberman_pinscher),
-        Puppy(name = "Gaddy", breed = "Golden Retriever", image = R.drawable.golden_retriever),
-        Puppy(name = "Jack", breed = "Jack Russel Terrier", image = R.drawable.jack_russel_terrier),
-        Puppy(name = "Patty", breed = "Pomeranian", image = R.drawable.pomeranian),
-        Puppy(name = "Pea", breed = "Pug", image = R.drawable.pug),
-        Puppy(name = "Racer", breed = "Riesenschnautzer", image = R.drawable.riesenschnautzer),
-        Puppy(name = "Raffi", breed = "Rottweiler", image = R.drawable.rottweiler),
-        Puppy(name = "Sammy", breed = "Saint Bernand", image = R.drawable.saint_bernand),
-        Puppy(name = "Sandy", breed = "Shih Tzu", image = R.drawable.shih_tzu),
-        Puppy(name = "Sari", breed = "Siberian Husky", image = R.drawable.siberian_husky),
-        Puppy(name = "Washi", breed = "Welsh Corgi", image = R.drawable.welsh_corgi),
+    var puppies = listOf(
+        Puppy(id = 1L, name = "Annabelle", breed = "Akita Inu", image = R.drawable.akita_inu),
+        Puppy(id = 2L, name = "Britta", breed = "Beagle", image = R.drawable.beagle),
+        Puppy(id = 3L, name = "Charles", breed = "Chihuahua", image = R.drawable.chihuahua),
+        Puppy(id = 4L, name = "Davis", breed = "Dachshund", image = R.drawable.dachshund),
+        Puppy(id = 5L, name = "Dex", breed = "Dalmatian", image = R.drawable.dalmatian),
+        Puppy(id = 6L, name = "Dalton", breed = "Doberman Pinscher", image = R.drawable.doberman_pinscher),
+        Puppy(id = 7L, name = "Gaddy", breed = "Golden Retriever", image = R.drawable.golden_retriever),
+        Puppy(id = 8L, name = "Jack", breed = "Jack Russel Terrier", image = R.drawable.jack_russel_terrier),
+        Puppy(id = 9L, name = "Patty", breed = "Pomeranian", image = R.drawable.pomeranian),
+        Puppy(id = 10L, name = "Pea", breed = "Pug", image = R.drawable.pug),
+        Puppy(id = 11L, name = "Racer", breed = "Riesenschnautzer", image = R.drawable.riesenschnautzer),
+        Puppy(id = 12L, name = "Raffi", breed = "Rottweiler", image = R.drawable.rottweiler),
+        Puppy(id = 13L, name = "Sammy", breed = "Saint Bernand", image = R.drawable.saint_bernand),
+        Puppy(id = 14L, name = "Sandy", breed = "Shih Tzu", image = R.drawable.shih_tzu),
+        Puppy(id = 15L, name = "Sari", breed = "Siberian Husky", image = R.drawable.siberian_husky),
+        Puppy(id = 16L, name = "Washi", breed = "Welsh Corgi", image = R.drawable.welsh_corgi),
     )
+
+    fun getPuppy(id: Long): Puppy {
+        return puppies.first { x -> x.id.equals(id) }
+    }
 }
